@@ -1,0 +1,21 @@
+<h1>Create order</h1>
+<form method="post" ng-submit="create(form.$valid, order)" name="form" novalidate class="create-form">
+    <div class="form-group" ng-class="{'has-error': !form.name.$valid && form.$submitted}">
+        <input type="text" class="form-control" placeholder="Name" required="required" ng-model="order.name" name="name">
+    </div>
+    <div class="form-group" ng-class="{'has-error': form.weight.$invalid && form.$submitted}">
+        <input type="text" class="form-control" placeholder="Weight" required="required" ng-model="order.weight" name="weight">
+    </div>
+    <div class="form-group" ng-class="{'has-error': form.destination.$invalid && form.$submitted}">
+        <input type="text" class="form-control" placeholder="Destination" required="required" ng-model="order.destination" name="destination">
+    </div>
+    <div class="form-group" ng-class="{'has-error': form.client.$invalid && form.$submitted}">
+        <label>
+            <select ng-model="order.client" class="form-control" ng-options="option.name for option in clients track by option.id" name="client" required>
+                <option value="">Choose a client</option>
+            </select>
+        </label>
+    </div>
+    <button type="submit" class="btn btn-default" ng-disabled="submiting">Submit</button>
+    <div class="spin create-form__spin" ng-show="submiting" ng-class="{'spin_animated_yes': submiting}"></div>
+</form>

@@ -1,0 +1,206 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    min-width: 980px;
+}
+
+/* layout */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    height: 55px;
+    padding: 0 40px;
+    
+    background: #273837;
+    color: #899698;
+}
+
+footer {
+    position: relative;
+    
+    height: 40px;
+    padding: 0 40px;
+    
+    text-align: right;
+}
+
+.page {
+    min-height: 100%;
+    margin: 0 0 -40px;
+}
+
+.page__i {
+    padding: 55px 0 40px;
+}
+
+/* logo */
+.logo {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 55px;
+    
+    display: inline-block;
+}
+
+/* user */
+.user {
+    font-weight: 700;
+    
+    height: 100%;
+    padding: 5px 50px 5px 0;
+    
+    position: absolute;
+    right: 40px;
+    top: 0;
+}
+
+.user__ico {
+    height: 100%;
+    width: 45px;
+    margin: 0 10px 0 0;
+    
+    display: inline-block;
+    vertical-align: middle;
+    
+    background: #c6c5c6 url(../img/user__ico.svg) no-repeat 0 0;
+    background-size: contain;
+    border-radius: 50%;
+}
+
+.user__logout {
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    height: 100%;
+    width: 40px;
+    
+    background: url(../img/user__logout.svg) no-repeat 50% 50%;
+    background-size: 20px 20px;
+}
+
+.user__logout:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.user__name {
+    vertical-align: middle;
+}
+
+/* create */
+.create {
+    padding: 20px;
+    
+    background: #e5eded;
+    border: solid 1px #dfe5e6;
+    border-radius: 10px;
+    
+    text-align: right;
+}
+
+/* create form */
+.create-form {
+    width: 600px;
+    margin: 30px auto 0;
+}
+
+.create-form__spin {
+    margin-left: 10px;
+}
+
+/* orders */
+.orders-content {
+    padding: 10px;
+}
+
+.orders {
+    margin: 20px 0;
+    
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.orders td {
+    padding: 10px;
+    
+    text-align: center;
+}
+
+.orders tbody tr:nth-child(2n+1) td {
+    background-color: #e6f8f0;
+}
+
+.orders th {
+    padding: 10px;
+    
+    background: #ea69fd;
+    color: #fff;
+}
+
+.orders thead th {
+    text-align: center;
+}
+
+.orders thead tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.orders thead tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.orders tfoot tr:first-child th:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.orders tfoot tr:first-child th:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+.orders__actions {
+    display: inline-block;
+    
+    height: 20px;
+    width: 20px;
+    
+    background: url(../img/orders__action.svg) no-repeat 50% 50%;
+    background-size: contain;
+}
+
+/* content */
+h1 {
+    font-size: 30px;
+    
+    margin-top: 0;
+    padding: 7px 40px;
+    
+    background: #ea69fd;
+    color: #fff;
+}
+
+.spin {
+    display: inline-block;
+    vertical-align: middle;
+    
+    height: 25px;
+    width: 25px;
+    
+    border-top: solid 2px #ea69fd;
+    border-left: solid 2px #ea69fd;
+    border-radius: 50%;
+}
+
+.spin_animated_yes {
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from {transform:rotate(0);}
+    to {transform:rotate(360deg);}
+}
